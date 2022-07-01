@@ -6,7 +6,8 @@
 
 //Esta biblioteca contiene dos funciones
 //    1.resuelve(): para encontrar el 2 en el laberinto
-//    2.imprimir_solucion: para imprimir el laberinto con solo los numeros de la solucion
+//    2.par_ordenado(): guarda en un struct la posicion(x,y) de los nuemeros iguales a 1 en los bordes de la matriz
+//    3.imprimir_solucion: para imprimir el laberinto con solo los numeros de la solucion
 
 
 //Funcion para encontrar el valor '2'
@@ -51,7 +52,7 @@ int resuelve(int x, int y, int filas, int columnas, int (*laberinto)[filas][colu
   return 0;
 }
 
-//genera par ordenado de entradas al laberinto
+//Genera par ordenado de entradas al laberinto y los guarda en un struct
 node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len])
 {
   node_t *head, *temp, *pointer;
@@ -95,7 +96,7 @@ node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len
 	}
 
 
-//Funcion para imprimir la solucion
+
 void imprimir_solucion(int filas, int columnas,int (*sol)[filas][columnas]){
   for(int i = 0; i < filas; i++){
     for(int j = 0; j < columnas; j++){
