@@ -4,28 +4,11 @@
 #include "struct.h"
 #include "soluciona.h"
 
-
-/*
-struct Nodo{
-	int x;
-	int y;
-	struct Nodo *siguiente;
-};
-
-typedef struct Nodo node_t;*/
+//Esta biblioteca contiene dos funciones
+//    1.resuelve(): para encontrar el 2 en el laberinto
+//    2.imprimir_solucion: para imprimir el laberinto con solo los numeros de la solucion
 
 
-//Funcion para imprimir la solucion
-void imprimir_solucion(int filas, int columnas,int (*sol)[filas][columnas]){
-  for(int i = 0; i < filas; i++){
-    for(int j = 0; j < columnas; j++){
-        
-        printf("%d ", (*sol)[i][j]);
-    }
-    printf("\n");
-  }
-
-}
 //Funcion para encontrar el valor '2'
 int resuelve(int x, int y, int filas, int columnas, int (*laberinto)[filas][columnas],int (*solucion)[filas][columnas]){
   if((*laberinto)[x][y] == 2)
@@ -110,3 +93,16 @@ node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len
     return head;
     free(pointer);
 	}
+
+
+//Funcion para imprimir la solucion
+void imprimir_solucion(int filas, int columnas,int (*sol)[filas][columnas]){
+  for(int i = 0; i < filas; i++){
+    for(int j = 0; j < columnas; j++){
+        
+        printf("%d ", (*sol)[i][j]);
+    }
+    printf("\n");
+  }
+
+}

@@ -4,17 +4,10 @@
 #include "struct.h"
 #include "obtieneMatriz.h"
 
-
-/*
-struct Nodo{
-	int x;
-	int y;
-	struct Nodo *siguiente;
-};
-
-typedef struct Nodo node_t;
-*/
-
+//Esta biblioteca contiene 3 funciones
+//    1.cuenta_columnas(): con base en la entrada tipo string desde el laberinto.txt
+//    2.cuenta_filas(): con base en la entrada tipo string desde el laberinto.txt
+//    3. Construye_matrix(): genera una matriz de integers con base en el laberinto.txt y las filas y columnas contadas.
 
 int cuenta_columnas(char *puntero){
     int n = 0;

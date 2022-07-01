@@ -5,15 +5,6 @@
 #include "obtieneMatriz.h"
 #include "soluciona.h"
 
-/*
-*struct Nodo{
-	int x;
-	int y;
-	struct Nodo *siguiente;
-};
-
-typedef struct Nodo node_t;
-*/
 
 int main(){
   
@@ -46,8 +37,10 @@ int main(){
   }
   
 //Asignacion de coordenadas de entrada al laberinto por los lados
- int x;
- int y; 
+ int a;
+ int b;
+
+
 
  HEAD = par_ordenado(fil_len, col_len, laberinto);
 //mostrar_pares(HEAD);
@@ -55,11 +48,11 @@ int main(){
 //Evaluacion de las entradas al laberinto
 //******************************  
     while(HEAD != NULL){
-        x = HEAD->x;
-        y = HEAD->y;
+        a = HEAD->x;
+        b = HEAD->y;
         
         
-    if(resuelve(x, y, fil_len, col_len, laberinto, solucion) == 1)
+    if(resuelve(a, b, fil_len, col_len, laberinto, solucion) == 1)
     {
         printf("Solucion encontrada!\n");
         printf("Punto de entrada: (%d, %d)\n", HEAD->x, HEAD->y);

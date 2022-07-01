@@ -1,5 +1,5 @@
 #ifndef OBTIENEMATRIZ_H
-#define OBTIENEMATRIZ_H    
+#define OBTIENEMATRIZ_H   
 
 int cuenta_columnas(char *puntero);
 int cuenta_filas(char *puntero, int columnas);
