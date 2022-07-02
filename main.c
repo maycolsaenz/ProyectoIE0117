@@ -5,7 +5,6 @@
 #include "obtieneMatriz.h"
 #include "soluciona.h"
 
-
 int main(){
   
   char *informacion = malloc(10000*sizeof(char));
@@ -18,9 +17,8 @@ int main(){
   node_t *HEAD = NULL;
 
   
-
-  //construccion del laberinto para analizar
-    int (*laberinto)[fil_len][col_len] = malloc(sizeof*laberinto); 
+//construccion del laberinto para analizar. Se guardara en el heap.
+	int (*laberinto)[fil_len][col_len] = malloc(sizeof*laberinto); 
 
     for(int m = 0; m < fil_len; m++){
      for(int n = 0; n < col_len; n++){
@@ -28,22 +26,22 @@ int main(){
     }
   }
 
-  //se rellena la matrix solucion con ceros
+//se rellena la matrix solucion con ceros
   int (*solucion)[fil_len][col_len] = malloc(sizeof*solucion);
   for(int i = 0; i < fil_len; i++){
     for(int j = 0; j < col_len; j++){
       (*solucion)[i][j] = 0;
     }
   }
-  
+
 //Asignacion de coordenadas de entrada al laberinto por los lados
  int a;
  int b;
 
 
-
+// HEAD devuelve las coordenadas (x,y) de los unos en los bordes del laberinto como puntos de entrada. 
  HEAD = par_ordenado(fil_len, col_len, laberinto);
-//mostrar_pares(HEAD);
+
   
 //Evaluacion de las entradas al laberinto
 //******************************  

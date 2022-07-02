@@ -4,7 +4,7 @@
 #include "struct.h"
 #include "soluciona.h"
 
-//Esta biblioteca contiene dos funciones
+//Esta biblioteca contiene tres funciones
 //    1.resuelve(): para encontrar el 2 en el laberinto
 //    2.par_ordenado(): guarda en un struct la posicion(x,y) de los nuemeros iguales a 1 en los bordes de la matriz
 //    3.imprimir_solucion: para imprimir el laberinto con solo los numeros de la solucion
@@ -63,7 +63,7 @@ node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len
 	for(int i = 0; i < fil_len; i++){
 		for(int j = 0 ; j < col_len; j++){
                             
-			if(i == 0 || j == 0 || i == fil_len-1 || j == col_len-1){
+			if(i == 0 || j == 0 || i == fil_len-1 || j == col_len-1){ //recorre solo los bordes de la matriz
                 
                 if((*laberinto)[i][j] == 2 || (*laberinto)[i][j] == 1){
             
@@ -71,18 +71,18 @@ node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len
 				pointer->x = i;
 				pointer->y = j;
 				pointer->siguiente = NULL;
-                //fin del nodo aislado
+                //fin del nuevo nodo
                 
-				if(head == NULL){
+				if(head == NULL){		//Asignamos el primero valor al primer nodo
 					head = pointer;
                 }
                 else
                 {
-                   temp = head;
-                    while(temp->siguiente != NULL){
+                   temp = head;						//Recorremos los nodos existentes
+                    while(temp->siguiente != NULL){ //hasta el final
                         temp = temp->siguiente;
                     }
-                    temp->siguiente = pointer;
+                    temp->siguiente = pointer;		//ahora le agregamos el nuevo nodo creado arriba
                 }
 					
 					
