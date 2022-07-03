@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "struct.h"
 #include "soluciona.h"
 
 //Esta biblioteca contiene tres funciones
 //    1.resuelve(): para encontrar el 2 en el laberinto
 //    2.par_ordenado(): guarda en un struct la posicion(x,y) de los nuemeros iguales a 1 en los bordes de la matriz
-//    3.imprimir_solucion: para imprimir el laberinto con solo los numeros de la solucion
+//    3.imprimir_solucion(): para imprimir el laberinto con solo los numeros de la solucion
 
 
 //Funcion para encontrar el valor '2'
