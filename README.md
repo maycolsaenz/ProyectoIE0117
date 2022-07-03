@@ -1,6 +1,6 @@
 # Corredor del laberinto
 
-Introduce tu propio laberinto en el archivo de texto yo obtendrás la solución al correr el programa, escrito en C.
+Introduce tu propio laberinto en el archivo de texto y obtendrás la solución al correr el programa escrito en C.
 
 ## Pasos previos
 ```
@@ -9,13 +9,13 @@ Introduce tu propio laberinto en el archivo de texto yo obtendrás la solución 
 2. Ubícate en el directorio del proyecto usando la consola de Linux.
 ```
 ## Ejecutando el programa 
-     
-1. Abre el archivo `laberinto.txt` para modificarlo o agregar tu propia version del laberinto que quieres resolver.
+```   
+1. Abre el archivo *laberinto.txt* para modificarlo o agregar tu propia version del laberinto que quieres resolver.
     
 2. Recuerda que el número **2** marca el lugar que se quiere encontrar dentro del laberinto.
     
-3. Digita `make` para compilar y `make exec` para ejecutar podrás ver la ruta solución.   
- 
+3. Digita *make* para compilar y *make exec* para ejecutar podrás ver la ruta solución.   
+``` 
 ## Estructura del programa
 
 | Código fuente | Librerías |
