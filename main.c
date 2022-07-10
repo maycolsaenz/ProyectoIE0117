@@ -12,6 +12,7 @@ int main(){
 
   fread(informacion, 10000*(sizeof *informacion), sizeof informacion, archivo);
   //Una mejora es poder modificar el espacio de memoria segun el tamano de la matriz. 
+  //Investigar uso de calloc.
   int col_len = cuenta_columnas(informacion);
   int fil_len = cuenta_filas(informacion, col_len); 
 	
