@@ -58,7 +58,7 @@ int main(){
     {
      printf("No hay solucion\n"); 
     }     
-//seccion 7: liberacion de memoria
+//seccion 6: liberacion de memoria
   fclose(archivo);
   free(solucion);
   free(laberinto);
