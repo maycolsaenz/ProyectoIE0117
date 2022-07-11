@@ -16,7 +16,7 @@ Introduce tu propio laberinto en el archivo de texto y obtén la solución. Cód
 
 ## Estructura del programa
 
-| Código fuente | Librerías |
+| Código fuente | Bibliotecas |
 | :------|:------------|
 | main.c | struct.h |
 | obtieneMatriz.c | obtieneMatriz.h |
