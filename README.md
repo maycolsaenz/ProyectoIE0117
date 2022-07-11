@@ -51,4 +51,8 @@ Introduce tu propio laberinto en el archivo de texto y obtén la solución. Cód
     </ol>    
 </details>
 
+### Informe técnico
+Revisa el archivo <a href="./Informe_tecnico_A95616.pdf">Informe tecnico</a> del proyecto para mayor detalle.
+
+
 
