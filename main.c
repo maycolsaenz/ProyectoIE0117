@@ -7,10 +7,19 @@
 int main(){
   //Seccion 1: lectura del archivo laberinto.txt
 	
-  char *informacion = malloc(10000*sizeof(char));
-  FILE *archivo = fopen("./laberinto.txt", "r");
+  //Determina el tamano total del archivo.
+  FILE *archivo_aux = fopen("./laberinto.txt", "r");
+  int contador = 0;
+  while(fscanf(archivo_aux, "%*c") != EOF){
+    contador++;
+  }
+  printf("n = %d\n", contador);
+  
 
-  fread(informacion, 10000*(sizeof *informacion), sizeof informacion, archivo);
+  FILE *archivo = fopen("./laberinto.txt", "r");
+  char *informacion = malloc(contador*sizeof(char));
+  fread(informacion, sizeof(char), contador, archivo);
+  //fread(memoria, tamano de cada elemento a ser leido, cantidad de elementos, puntero al archivo)
   //Una mejora es poder modificar el espacio de memoria segun el tamano de la matriz. 
   //Investigar uso de calloc.
   int col_len = cuenta_columnas(informacion);
@@ -59,6 +68,7 @@ int main(){
      printf("No hay solucion\n"); 
     }     
 //seccion 6: liberacion de memoria
+  fclose(archivo_aux);
   fclose(archivo);
   free(solucion);
   free(laberinto);

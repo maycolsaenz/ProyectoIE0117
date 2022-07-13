@@ -97,12 +97,17 @@ node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len
 
 
 void imprimir_solucion(int filas, int columnas,int (*sol)[filas][columnas]){
+  int posicion[2];
   for(int i = 0; i < filas; i++){
     for(int j = 0; j < columnas; j++){
         
         printf("%d ", (*sol)[i][j]);
+        if((*sol)[i][j] == 2){
+          posicion[0] = i;
+          posicion[1] = j;
+        }
     }
     printf("\n");
   }
-
+  printf("La posicion del numero 2 es (%d, %d)\n", posicion[0], posicion[1]);
 }
