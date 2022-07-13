@@ -1,4 +1,4 @@
-# 🧩Corredor del laberinto
+# 🏃🏼Corredor del laberinto
 
 
 Introduce tu propio laberinto en el archivo de texto y obtén la solución. Código fuente en C.
