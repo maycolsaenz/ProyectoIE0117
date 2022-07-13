@@ -20,8 +20,8 @@ int main(){
   char *informacion = malloc(contador*sizeof(char));
   fread(informacion, sizeof(char), contador, archivo);
   //fread(memoria, tamano de cada elemento a ser leido, cantidad de elementos, puntero al archivo)
-  //Una mejora es poder modificar el espacio de memoria segun el tamano de la matriz. 
-  //Investigar uso de calloc.
+
+  //llamado a funciones para contar filas y columnas
   int col_len = cuenta_columnas(informacion);
   int fil_len = cuenta_filas(informacion, col_len); 
 	
