@@ -7,7 +7,7 @@
 int main(){
   //Seccion 1: lectura del archivo laberinto.txt
 	
-  //Determina el tamano total del archivo.
+  //Primera lectura determina el tamano total del archivo.
   FILE *archivo_aux = fopen("./laberinto.txt", "r");
   int contador = 0;
   while(fscanf(archivo_aux, "%*c") != EOF){
@@ -15,7 +15,7 @@ int main(){
   }
   printf("n = %d\n", contador);
   
-
+  //Segunda lectura para guardar los datos
   FILE *archivo = fopen("./laberinto.txt", "r");
   char *informacion = malloc(contador*sizeof(char));
   fread(informacion, sizeof(char), contador, archivo);
@@ -27,24 +27,16 @@ int main(){
 	
 //Seccion 2: construccion del laberinto para analizar. Se guardara en el heap.
 	int (*laberinto)[fil_len][col_len] = malloc(sizeof*laberinto); 
-	for(int m = 0; m < fil_len; m++){
-     for(int n = 0; n < col_len; n++){
-      (*laberinto)[m][n] = Contruye_matrix(fil_len, col_len, informacion, m, n);
-    }
-  }
-//Seccion 3: se rellena la matrix solucion con ceros
-  int (*solucion)[fil_len][col_len] = malloc(sizeof*solucion);
-  for(int i = 0; i < fil_len; i++){
-    for(int j = 0; j < col_len; j++){
-      (*solucion)[i][j] = 0;
-    }
-  }
+  Construye_matriz(fil_len, col_len, informacion, laberinto);
 
-//seccion 4: HEAD devuelve las coordenadas (x,y) de los unos en los bordes del laberinto como puntos de entrada.
+//Matriz solucion
+  int (*solucion)[fil_len][col_len] = malloc(sizeof*solucion);
+
+//seccion 3: HEAD devuelve las coordenadas (x,y) de los unos en los bordes del laberinto como puntos de entrada.
  node_t *HEAD = NULL;
  HEAD = par_ordenado(fil_len, col_len, laberinto);
 
-//Seccion 5: Evaluacion de las entradas al laberinto
+//Seccion 4: Evaluacion de las entradas al laberinto
 //Asignacion de coordenadas de entrada al laberinto por los lados
  int a;
  int b;
@@ -67,7 +59,7 @@ int main(){
     {
      printf("No hay solucion\n"); 
     }     
-//seccion 6: liberacion de memoria
+//seccion 5: liberacion de memoria
   fclose(archivo_aux);
   fclose(archivo);
   free(solucion);

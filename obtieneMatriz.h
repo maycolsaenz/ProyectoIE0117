@@ -3,6 +3,6 @@
 
 int cuenta_columnas(char *puntero);
 int cuenta_filas(char *puntero, int columnas);
-int Contruye_matrix(int filas, int columnas, char *puntero, int x, int y);
+void Construye_matriz(int filas, int columnas, char *puntero, int (*laberinto)[filas][columnas]);
 
 #endif
