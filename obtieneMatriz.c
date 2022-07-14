@@ -56,30 +56,3 @@ void Construye_matriz(int filas, int columnas, char *puntero, int (*laberinto)[f
     }   
   }
 }
-/*
-int Contruye_matrix(int filas, int columnas, char *puntero, int x, int y)
-{
-  int matrix[filas][columnas];
-  int n = 0;
-  for(int i = 0; i < filas; i++)
-  {
-    
-    for(int j = 0; j < columnas; j++)
-    {
-     
-     //cambio a integer
-     if(puntero[n] == '1'){
-        matrix[i][j] = 1; 
-     } 
-      else{
-         if(puntero[n] == '2'){
-          matrix[i][j] = 2; 
-     } 
-     else{matrix[i][j] = 0;}}
-    n += 2; 
-    }   
-  }
-
-  return matrix[x][y];
-}
-*/

@@ -13,7 +13,6 @@ int main(){
   while(fscanf(archivo_aux, "%*c") != EOF){
     contador++;
   }
-  printf("n = %d\n", contador);
   
   //Segunda lectura para guardar los datos
   FILE *archivo = fopen("./laberinto.txt", "r");
