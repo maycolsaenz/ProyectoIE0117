@@ -10,7 +10,7 @@
 
 
 //Funcion para encontrar el valor '2'
-int resuelve(int x, int y, int filas, int columnas, int (*laberinto)[filas][columnas],int (*solucion)[filas][columnas]){
+int resuelve(int x, int y, int filas, int columnas, int short(*laberinto)[filas][columnas],int short (*solucion)[filas][columnas]){
   if((*laberinto)[x][y] == 2)
   {
     (*solucion)[x][y] = 2;
@@ -52,7 +52,7 @@ int resuelve(int x, int y, int filas, int columnas, int (*laberinto)[filas][colu
 }
 
 //Genera par ordenado de entradas al laberinto y los guarda en un struct
-node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len])
+node_t *par_ordenado(int fil_len, int col_len, int short (*laberinto)[fil_len][col_len])
 {
   node_t *head, *temp, *pointer;
   head = NULL;
@@ -96,7 +96,7 @@ node_t *par_ordenado(int fil_len, int col_len, int (*laberinto)[fil_len][col_len
 
 
 
-void imprimir_solucion(int filas, int columnas,int (*sol)[filas][columnas]){
+void imprimir_solucion(int filas, int columnas,int short (*sol)[filas][columnas]){
   int posicion[2];
   for(int i = 0; i < filas; i++){
     for(int j = 0; j < columnas; j++){

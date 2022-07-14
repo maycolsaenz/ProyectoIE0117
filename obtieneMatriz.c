@@ -31,7 +31,7 @@ int cuenta_filas(char *puntero, int columnas){
   return filas;
 }
 
-void Construye_matriz(int filas, int columnas, char *puntero, int (*laberinto)[filas][columnas])
+void Construye_matriz(int filas, int columnas, char *puntero, int short (*laberinto)[filas][columnas])
 {  
   int n = 0;
   for(int i = 0; i < filas; i++)
